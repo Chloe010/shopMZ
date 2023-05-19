@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>category</title>
+	<link rel="stylesheet" type="text/css" href="admin/common/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="admin/common/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="admin/common/demo.css">
+	<script type="text/javascript" src="admin/common/jquery.min.js"></script>
+	<script type="text/javascript" src="admin/common/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="admin/common/js/buys.js"></script>
+</head>
+<body>
+	<div style="text-align:center;padding:5px 0">
+			<button id = "edit" class="easyui-linkbutton"  style="width:100px">发货</button>
+			<button id = "delete" class="easyui-linkbutton"  style="width:100px">退款</button>
+			<input id="search"> </input>
+	</div>
+	<table id="buys" class="easyui-datagrid" title="" style="width:100%;height:280px">
+	</table>
+	<div id="edit_dialog" class="easyui-dialog" title="确定修改" data-options="closed:'true'" style="width:400px;height:250px;padding:10px">
+		<div style="margin-bottom:20px">
+			<p id = "name"></p>
+		</div>
+		<div style="margin-bottom:20px">
+			<p id = "address"></p>
+		</div>
+		<div style="margin-bottom:20px">
+			<p id = "number"></p>
+		</div>
+		<div style="text-align:center;padding:5px 0">
+		<button id = "edit_confirm" class="easyui-linkbutton"  style="width:100px">确定</button>
+		<button id = "edit_cancel" class="easyui-linkbutton"  style="width:100px">取消</button>
+		</div>
+	</div>
+	<div id="delete_dialog" class="easyui-dialog" title="确定删除" data-options="closed:'true'" style="width:400px;height:200px;padding:10px">
+	<div style="text-align:center;padding:5px 0;padding-top:50px">
+		<div style="margin-bottom:20px">
+			<p id = "tuikuan"></p>
+		</div>
+		<button id = "delete_confirm" class="easyui-linkbutton"  style="width:100px">确定</button>
+		<button id = "delete_cancel" class="easyui-linkbutton"  style="width:100px">取消</button>
+	</div>
+	</div>
+</body>
+</html>

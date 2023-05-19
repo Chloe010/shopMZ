@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>category</title>
+	<link rel="stylesheet" type="text/css" href="admin/common/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="admin/common/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="admin/common/demo.css">
+	<script type="text/javascript" src="admin/common/jquery.min.js"></script>
+	<script type="text/javascript" src="admin/common/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="admin/common/js/category.js"></script>
+</head>
+<body>
+	<div style="text-align:center;padding:5px 0">
+			<button id = "new" class="easyui-linkbutton"  style="width:100px">新增</button>
+			<button id = "edit" class="easyui-linkbutton"  style="width:100px">修改</button>
+			<button id = "delete" class="easyui-linkbutton"  style="width:100px">删除</button>
+	</div>
+	<table id="category" class="easyui-datagrid" title="" style="width:100%;height:280px">
+	</table>
+	<div id="new_dialog" class="easyui-dialog" title="增加分类" data-options="closed:'true'" style="width:400px;height:250px;padding:10px">
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox"  name="new_fid" style="width:100%" data-options="label:'父级ID:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_name" style="width:100%" data-options="label:'分类名称:',required:true">
+		</div>
+		<div style="text-align:center;padding:5px 0">
+		<button id = "new_confirm" class="easyui-linkbutton"  style="width:100px">确定</button>
+		<button id = "new_cancel" class="easyui-linkbutton"  style="width:100px">取消</button>
+		</div>
+	</div>
+	<div id="edit_dialog" class="easyui-dialog" title="确定修改" data-options="closed:'true'" style="width:400px;height:250px;padding:10px">
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" id="edit_fid"  name="edit_fid" style="width:100%" data-options="label:'父级ID:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" id="edit_name" name="edit_name" style="width:100%" data-options="label:'分类名称:',required:true">
+		</div>
+		<div style="text-align:center;padding:5px 0">
+		<button id = "edit_confirm" class="easyui-linkbutton"  style="width:100px">确定</button>
+		<button id = "edit_cancel" class="easyui-linkbutton"  style="width:100px">取消</button>
+		</div>
+	</div>
+	<div id="delete_dialog" class="easyui-dialog" title="确定删除" data-options="closed:'true'" style="width:400px;height:200px;padding:10px">
+	<div style="text-align:center;padding:5px 0;padding-top:50px">
+		<button id = "delete_confirm" class="easyui-linkbutton"  style="width:100px">确定</button>
+		<button id = "delete_cancel" class="easyui-linkbutton"  style="width:100px">取消</button>
+	</div>
+	</div>
+</body>
+</html>

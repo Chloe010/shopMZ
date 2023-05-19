@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>category</title>
+	<link rel="stylesheet" type="text/css" href="admin/common/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="admin/common/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="admin/common/demo.css">
+	<script type="text/javascript" src="admin/common/jquery.min.js"></script>
+	<script type="text/javascript" src="admin/common/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="admin/common/js/goods.js"></script>
+</head>
+<body>
+	<div style="text-align:center;padding:5px 0">
+			<button id = "new" class="easyui-linkbutton"  style="width:100px">新增</button>
+			<button id = "edit" class="easyui-linkbutton"  style="width:100px">修改</button>
+			<button id = "delete" class="easyui-linkbutton"  style="width:100px">删除</button>
+	</div>
+	<table id="goods" class="easyui-datagrid" title="" style="width:100%;height:280px">
+	</table>
+	<div id="new_dialog" class="easyui-dialog" title="增加分类" data-options="closed:'true'" style="width:400px;height:250px;padding:10px">
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_cid" style="width:100%" data-options="label:'分类ID:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_cname" style="width:100%" data-options="label:'分类名称:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_description" style="width:100%" data-options="label:'简单描述:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_name" style="width:100%" data-options="label:'商品名称:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_original_price" style="width:100%" data-options="label:'初始价格:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_present_price" style="width:100%" data-options="label:'现在价格:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_size" style="width:100%" data-options="label:'使用肤质:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_colour" style="width:100%" data-options="label:'保质期:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_model" style="width:100%" data-options="label:'商品质地:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_pic_path" style="width:100%" data-options="label:'展位图地址:'">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="new_mygood_picture" style="width:100%" data-options="label:'列表图地址:'">
+		</div>
+		<div style="text-align:center;padding:5px 0">
+		<button id = "new_confirm" class="easyui-linkbutton"  style="width:100px">确定</button>
+		<button id = "new_cancel" class="easyui-linkbutton"  style="width:100px">取消</button>
+		</div>
+	</div>
+	<div id="edit_dialog" class="easyui-dialog" title="确定修改" data-options="closed:'true'" style="width:400px;height:250px;padding:10px">
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_cid"  id="edit_cid" style="width:100%" data-options="label:'分类ID:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_cname" id="edit_cname"  style="width:100%" data-options="label:'分类名称:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_description" id="edit_description" style="width:100%" data-options="label:'商品简介:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_name" id="edit_name" style="width:100%" data-options="label:'商品名称:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_original_price" id = "edit_original_price" style="width:100%" data-options="label:'初始价格:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_present_price" id="edit_present_price"  style="width:100%" data-options="label:'现在价格:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_size"  id="edit_size" style="width:100%" data-options="label:'大小吃码:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_colour" id="edit_colour" style="width:100%" data-options="label:'商品颜色:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_model" id="edit_model" style="width:100%" data-options="label:'商品型号:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_pic_path" id="edit_pic_path" style="width:100%" data-options="label:'展位图地址:',required:true">
+		</div>
+		<div style="margin-bottom:20px">
+			<input class="easyui-textbox" name="edit_mygood_picture" id="edit_mygood_picture" style="width:100%" data-options="label:'列表图地址:',required:true">
+		</div>
+		<div style="text-align:center;padding:5px 0">
+		<button id = "edit_confirm" class="easyui-linkbutton"  style="width:100px">确定</button>
+		<button id = "edit_cancel" class="easyui-linkbutton"  style="width:100px">取消</button>
+		</div>
+	</div>
+	<div id="delete_dialog" class="easyui-dialog" title="确定删除" data-options="closed:'true'" style="width:400px;height:200px;padding:10px">
+	<div style="text-align:center;padding:5px 0;padding-top:50px">
+		<button id = "delete_confirm" class="easyui-linkbutton"  style="width:100px">确定</button>
+		<button id = "delete_cancel" class="easyui-linkbutton"  style="width:100px">取消</button>
+	</div>
+	</div>
+</body>
+</html>
